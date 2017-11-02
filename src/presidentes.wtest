@@ -1,6 +1,26 @@
+import presidentes.*
 
-test "testX" {
+describe "Test de Presidentes"{
+	var peron = new Presidente (1974, [inaguracionVial, inaguracionHabitacional, inaguracionSalud,denuncia])
+	var alfonsin = new Presidente  
+	var inaguracionVial = new InaguracionVial
+	var inaguracionHabitacional = new inaguracionHabitacional
+	var inaguracionSalud = new InaguracionSalud
+	var denuncia = new Denuncia
+	
+	fixture {
+		peron.cumplirPromesasFalsas()
+	}
+	
 
-	assert.that(true)
-
+	test "Imagen Positiva" {
+		assert.equals(1000, peron.imagen())
+	}
+	
+	test "Mas de 4"{
+		assert.that(peron.masDeCuatro())
+	}
 }
+
+//La herencia fue util para las clases, los constructores y los Super.
+//Si las hace un sindicalista, se deben aportar los parametros de el
